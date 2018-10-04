@@ -44,10 +44,11 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
+  holidays_with_bbqs = Array.New
   holiday_hash.each do |season, holiday|
     holiday.each do |holiday, supplies|
       if supplies.include? ("BBQ")
-        puts holiday
+        holidays_with_bbqs << holiday
       end
     end
   end
